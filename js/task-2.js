@@ -2,15 +2,7 @@ const getUsersWithFriend = (users, friendName) => {
     return users.filter(user => user.friends.includes(friendName));
   };
   
-  const users = [
-    { id: 1, name: "Moore Hensley", friends: ["Sharron Pace"] },
-    { id: 2, name: "Sharlene Bush", friends: ["Briana Decker", "Sharron Pace"] },
-    { id: 3, name: "Ross Vazquez", friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"] },
-    { id: 4, name: "Elma Head", friends: ["Goldie Gentry", "Aisha Tran"] },
-    { id: 5, name: "Carey Barr", friends: ["Jordan Sampson", "Eddie Strong"] },
-    { id: 6, name: "Blackburn Dotson", friends: ["Jacklyn Lucas", "Linda Chapman"] },
-    { id: 7, name: "Sheree Anthony", friends: ["Goldie Gentry", "Briana Decker"] }
-  ];
+  // Приклад використання:
   const allUsers = [
     {
       name: "Moore Hensley",
@@ -41,30 +33,80 @@ const getUsersWithFriend = (users, friendName) => {
       friends: ["Goldie Gentry", "Briana Decker"]
     }
   ];
-  
-  console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
+  console.log(
+    sortByDescendingFriendCount([
+      {
+        name: "Moore Hensley",
+        friends: ["Sharron Pace"],
+        gender: "male"
+      },
+      {
+        name: "Sharlene Bush",
+        friends: ["Briana Decker", "Sharron Pace"],
+        gender: "female"
+      },
+      {
+        name: "Ross Vazquez",
+        friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+        gender: "male"
+      },
+      {
+        name: "Elma Head",
+        friends: ["Goldie Gentry", "Aisha Tran"],
+        gender: "female"
+      },
+      {
+        name: "Carey Barr",
+        friends: ["Jordan Sampson", "Eddie Strong"],
+        gender: "male"
+      },
+      {
+        name: "Blackburn Dotson",
+        friends: ["Jacklyn Lucas", "Linda Chapman"],
+        gender: "male"
+      },
+      {
+        name: "Sheree Anthony",
+        friends: ["Goldie Gentry", "Briana Decker"],
+        gender: "female"
+      }
+    ])
+  );
   // [
+  //   {
+  //     name: "Ross Vazquez",
+  //     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+  //     gender: "male"
+  //   },
   //   {
   //     name: "Sharlene Bush",
-  //     friends: ["Briana Decker", "Sharron Pace"]
+  //     friends: ["Briana Decker", "Sharron Pace"],
+  //     gender: "female"
   //   },
-  //   {
-  //     name: "Sheree Anthony",
-  //     friends: ["Goldie Gentry", "Briana Decker"]
-  //   }
-  // ]
-  
-  console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
-  // [
   //   {
   //     name: "Elma Head",
-  //     friends: ["Goldie Gentry", "Aisha Tran"]
+  //     friends: ["Goldie Gentry", "Aisha Tran"],
+  //     gender: "female"
+  //   },
+  //   {
+  //     name: "Carey Barr",
+  //     friends: ["Jordan Sampson", "Eddie Strong"],
+  //     gender: "male"
+  //   },
+  //   {
+  //     name: "Blackburn Dotson",
+  //     friends: ["Jacklyn Lucas", "Linda Chapman"],
+  //     gender: "male"
   //   },
   //   {
   //     name: "Sheree Anthony",
-  //     friends: ["Goldie Gentry", "Briana Decker"]
+  //     friends: ["Goldie Gentry", "Briana Decker"],
+  //     gender: "female"
+  //   },
+  //   {
+  //     name: "Moore Hensley",
+  //     friends: ["Sharron Pace"],
+  //     gender: "male"
   //   }
   // ]
-  
-  console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
   
