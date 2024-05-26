@@ -2,8 +2,7 @@ const getUsersWithFriend = (users, friendName) => {
     return users.filter(user => user.friends.includes(friendName));
   };
   
-  // Приклад використання:
-  const allUsers = [
+    const allUsers = [
     {
       name: "Moore Hensley",
       friends: ["Sharron Pace"]
